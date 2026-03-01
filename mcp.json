@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "tuber": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v",
+        "${HOME}/Downloads:/downloads",
+        "-e",
+        "DOWNLOADS_DIR=/downloads",
+        "tuber-mcp"
+      ]
+    }
+  }
+}

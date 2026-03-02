@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { SearchVideosSchema } from "./searchVideo.js";
+import { SearchVideosSchema } from "../searchVideo.js";
 
 describe("SearchVideosSchema", () => {
   // ── query ──────────────────────────────────────────────────────────────────

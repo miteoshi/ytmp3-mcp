@@ -1,6 +1,6 @@
 // src/schema/downloadAudio.test.ts
 import { describe, it, expect } from "vitest";
-import { DownloadAudioSchema } from "./downloadAudio.js";
+import { DownloadAudioSchema } from "../downloadAudio.js";
 
 describe("DownloadAudioSchema", () => {
   it("accepts valid input", () => {

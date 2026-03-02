@@ -1,9 +1,9 @@
 // src/tools/downloadAudio.test.ts
 import { describe, it, expect, vi } from "vitest";
-import { downloadAudio } from "./downloadAudio.js";
+import { downloadAudio } from "../downloadAudio.js"
 
 // Mock spawnPromise so no real yt-dlp calls happen
-vi.mock("../utils/spawn-promise.js", () => ({
+vi.mock("../../utils/spawn-promise.js", () => ({
   spawnPromise: vi.fn().mockResolvedValue("Baby Keem - Mock Title"),
 }));
 

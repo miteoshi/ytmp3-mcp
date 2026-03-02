@@ -1,6 +1,6 @@
 // src/utils/validate.test.ts
 import { describe, it, expect } from "vitest";
-import { normalizeTime } from "./validate.js";
+import { normalizeTime } from "../validate.js";
 
 describe("normalizeTime", () => {
   it("converts MM:SS to HH:MM:SS", () => {

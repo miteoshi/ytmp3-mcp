@@ -1,5 +1,3 @@
-# ytmp3-mcp
-
 <p align="center">
   <img src="./assets/logo.png" width="500" alt="ytmp3-mcp logo" />
 </p>
@@ -27,7 +25,7 @@ More tools coming soon.
 
 ---
 
-## Option 1 — Docker (recommended, no setup)
+## Docker (recommended, no setup)
 
 ### 1. Pull the image
 
@@ -63,7 +61,7 @@ docker pull piyush9969/ytmp3-mcp:latest
 
 ---
 
-## Option 2 — Build from source (Docker)
+## Build from source (Docker)
 
 If you want to build the image yourself instead of pulling:
 
@@ -93,7 +91,7 @@ Then use the same `mcp.json` as above but replace the image name:
 
 ---
 
-## Option 3 — Run directly via npm (no Docker)
+## Run directly via npm (no Docker)
 
 Requires `yt-dlp` and `ffmpeg` installed on your machine:
 
@@ -188,7 +186,4 @@ LLM client
 Each tool call spawns a fresh process, runs the command, and exits. No persistent container, no background process.
 
 ---
-
-## Repo
-
-[github.com/miteoshi/ytmp3-mcp](https://github.com/miteoshi/ytmp3-mcp)
+adding more features..

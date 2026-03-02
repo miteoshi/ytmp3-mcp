@@ -1,0 +1,10 @@
+## !!Compose file are not supported by LMstudio, but you can use this as a reference to set up the container manually.
+services:
+  tuber:
+    image: piyush9969/ytmp3-mcp:latest
+    stdin_open: true   # keeps the MCP stdio transport open
+    tty: false         # MCP uses raw stdin/stdout, not a TTY
+    environment:
+      - DOWNLOADS_DIR=/downloads
+    volumes:
+      - ${DOWNLOADS_PATH}:/downloads

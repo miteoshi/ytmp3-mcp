@@ -3,10 +3,11 @@ import { DownloadAudioSchema } from "../schema/downloadAudio.js";
 import { spawnPromise } from "../utils/spawn-promise.js";
 import { handleToolExecution } from "../utils/tool-execute.js";
 import { validateUrl } from "../utils/validate.js";
+import crypto from "crypto";
 
 import path from "path";
-import os from "os";
 import { getSafeFilename } from "../utils/transforms.js";
+import { getDownloadsDir } from "../utils/downloads.js";
 
 export const downloadAudioTool = {
   name: "download_audio",
@@ -83,13 +84,9 @@ export async function downloadAudio(
 
   const normalizedStart = startTime ? normalizeTime(startTime) : undefined;
   const normalizedEnd = endTime ? normalizeTime(endTime) : undefined;
-
-  const filename = await getSafeFilename(url);
-  const outputTemplate = path.join(
-    os.homedir(),
-    "Downloads",
-    `${filename}.%(ext)s`
-  );
+  const id = crypto.randomBytes(4).toString("hex");
+  const filename = `${await getSafeFilename(url)}_${id}`;
+const outputTemplate = path.join(getDownloadsDir(), `${filename}.%(ext)s`);
 
   const args = [
     "--ignore-config",
@@ -116,7 +113,7 @@ export async function downloadAudio(
 
   await spawnPromise("yt-dlp", args);
 
-  const finalPath = path.join(os.homedir(), "Downloads", `${filename}.mp3`);
+  const finalPath = path.join(getDownloadsDir(), `${filename}.mp3`);
   return `Audio downloaded successfully to ${finalPath}`;
 }
 

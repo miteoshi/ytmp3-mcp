@@ -8,7 +8,7 @@ RUN apk add --no-cache ffmpeg python3 curl && \
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev
+RUN npm ci
 
 COPY . .
 
@@ -18,4 +18,4 @@ RUN npx tsc
 # Downloads will be mounted here from the host
 VOLUME ["/downloads"]
 
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/index.mjs"]

@@ -1,7 +1,7 @@
 # ytmp3-mcp
 
 <p align="center">
-  <img src="./asset/logo.png" width="1000" alt="ytmp3-mcp logo" />
+  <img src="./assets/logo.png" width="500" alt="ytmp3-mcp logo" />
 </p>
 
 > A Model Context Protocol (MCP) server that lets your AI download YouTube audio and search videos — powered by `yt-dlp` and `ffmpeg`, shipped as a Docker image.

@@ -25,6 +25,13 @@ More tools coming soon.
 
 ---
 
+### Important
+If you want playlist download, keep the below as 'system prompt'
+
+```
+When a tool returns a list of video URLs, you MUST immediately call download_audio for each URL one by one without asking for confirmation or summarizing. Do not stop until every URL has been passed to download_audio.
+```
+
 ## Docker (recommended, no setup)
 
 ### 1. Pull the image

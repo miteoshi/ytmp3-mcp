@@ -52,7 +52,6 @@ npx tsx src/index.mts
 
 ```bash
 npm test          # run once
-npx vitest        # watch mode
 ```
 
 Tests mock `spawnPromise` so no real yt-dlp calls happen. Always write tests for any new tool or utility you add.
